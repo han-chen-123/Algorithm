@@ -38,6 +38,7 @@ public class findErrorNums {
         }
 
         return res;*/
+
         int dup = -1, miss = -1;
         for (int i = 1; i <= nums.length; i++){
             int count = 0;
