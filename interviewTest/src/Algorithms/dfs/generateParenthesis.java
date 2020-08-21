@@ -28,12 +28,15 @@ public class generateParenthesis {
     }
 
     public void dfs(int left, int right, String str, int n, ArrayList<String> res){
-        if(left == n && right == left){
+        if(left == n && right == n){
             res.add(str);
             return;
         }
+        if(right > left){
+            return;
+        }
 
-        if(left + 1 <= n) dfs(left + 1, right, str + "(", n, res);
-        if(right + 1<= left) dfs(left, right + 1, str + ")", n, res);
+        if(left < n) dfs(left + 1, right, str + "(", n, res);
+        if(right < n) dfs(left, right + 1, str + ")", n, res);
     }
 }
