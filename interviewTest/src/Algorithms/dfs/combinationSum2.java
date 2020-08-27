@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.dfs;
 
 /*LeetCode 40. 组合总和 II*/
 /*给定一个数组candidates和一个目标数target，找出candidates中所有可以使数字和为target的组合。
@@ -61,7 +61,7 @@ public class combinationSum2 {
             }
             
             track.add(candidates[i]);
-            backtrack(candidates, target - candidates[i], i, track);
+            backtrack(candidates, target - candidates[i], i + 1, track);
             track.removeLast();
         }
     }
