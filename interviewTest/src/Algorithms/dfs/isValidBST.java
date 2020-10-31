@@ -53,7 +53,9 @@ public class isValidBST {
     }
 
     private void inOrder(TreeNode root){
-        if(root!=null){
+        if(root == null){
+            return;}
+
             inOrder(root.left);
             res.add(root.val);
             inOrder(root.right);
@@ -61,7 +63,7 @@ public class isValidBST {
     }
 
     /*private void preOrder(TreeNode root){
-        if(root!=null){
+        if(root == null){return;}
             res.add(root.val);
             inOrder(root.left);
             inOrder(root.right);
@@ -69,10 +71,10 @@ public class isValidBST {
     }
 
     private void postOrder(TreeNode root){
-        if(root!=null){
+        if(root == null){return;}
             inOrder(root.left);
             inOrder(root.right);
             res.add(root.val);
         }
     }*/
-}
+
