@@ -22,6 +22,7 @@ public class maxProfit {
 
     public static int maxProfit(int[] prices) {
         int n = prices.length;
+        //[][] 第几天 买或者不买
         int[][] dp = new int[n][2];
 
         for(int i = 0; i < n; i++){

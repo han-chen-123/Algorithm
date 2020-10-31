@@ -24,6 +24,7 @@ public class longestValidParentheses {
         stack.push(-1);
         for(int i = 0; i < s.length(); i++){
             if(s.charAt(i) == '('){
+                //存入的i为下标
                 stack.push(i);
             }else{
                 stack.pop();
