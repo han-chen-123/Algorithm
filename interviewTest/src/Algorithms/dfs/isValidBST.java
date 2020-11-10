@@ -30,7 +30,7 @@ package Algorithms.dfs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class isValidBST {
+public class  isValidBST {
     public class TreeNode {
         int val;
         TreeNode left;
