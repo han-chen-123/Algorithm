@@ -16,7 +16,7 @@ package Algorithms.slidingWindow;
 
 public class minWindow {
     public String minWindow(String s, String t) {
-        int sLen = s.length();
+        /*int sLen = s.length();
         int tLen = t.length();
         if(sLen == 0 || tLen == 0 || sLen < tLen){
             return "";
@@ -80,6 +80,40 @@ public class minWindow {
             return "";
         }
 
-        return s.substring(begin, begin + minLen);
+        return s.substring(begin, begin + minLen);*/
+
+        String res = "";
+        int[] window = new int[128];
+        int[] need = new int[128];
+        char[] ss = s.toCharArray();
+        char[] tt = t.toCharArray();
+        if (s == null || ss.length == 0 || t == null || tt.length == 0){
+            return " ";
+        }
+
+        for (int i = 0; i < tt.length; i++){
+            need[tt[i]]++;
+        }
+
+        int i = 0, j = 0, count = 0;
+        int min = ss.length;
+        while (j < ss.length){
+            char cc = ss[j];
+            window[cc]++;
+            if (window[cc] <= need[cc]) count++;
+            while (count == tt.length){
+                if (j - i + 1 <= min){
+                    res = s.substring(i, j + 1);
+                    min = j - i + 1;
+                }
+                window[ss[i]]--;
+                if (window[ss[i]] < need[ss[i]]) count--;
+                i++;
+                if (i >= ss.length) break;
+            }
+            j++;
+        }
+
+        return res;
     }
 }
