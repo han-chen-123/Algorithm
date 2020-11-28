@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.greedy;
 
 /*LeetCode 56. 合并区间
 给出一个区间的集合，请合并所有重叠的区间。
