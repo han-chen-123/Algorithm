@@ -1,5 +1,8 @@
 package Algorithms.dfs;
 
+//排列组合问题一定要加visited
+//子集问题一定要加int start, i = start;
+
 /*Leetcode 面试题 08.07. 无重复字符串的排列组合*/
 /*无重复字符串的排列组合。编写一种方法，计算某字符串的所有排列组合，字符串每个字符均不相同。
 

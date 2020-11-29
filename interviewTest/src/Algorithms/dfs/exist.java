@@ -18,7 +18,7 @@ package Algorithms.dfs;
         给定 word = "ABCB", 返回 false*/
 
 public class exist {
-    public boolean[][] visited;
+    /*public boolean[][] visited;
     public String word;
     public char[][] board;
 
@@ -32,7 +32,7 @@ public class exist {
 
         for(int i = 0; i < board.length; i++){
             for(int j = 0; j < board[0].length; j++){
-                if (dfs(i, j, 0)== true){
+                if (dfs(i, j, 0)){
                     return true;
                 }
             }
@@ -45,7 +45,7 @@ public class exist {
         if (idx == word.length()){
             return true;
         }
-        if (i < 0 || i >=board.length || j < 0 || j >= board[0].length || visited[i][j] == true || board[i][j] != word.charAt(idx)){
+        if (i < 0 || i >=board.length || j < 0 || j >= board[0].length || visited[i][j] || board[i][j] != word.charAt(idx)){
             return false;
         }else{
             visited[i][j] = true;
@@ -55,5 +55,36 @@ public class exist {
         visited[i][j] = false;
 
         return res;
+    }*/
+
+    boolean find = false;
+    public boolean exist(char[][] board, String word) {
+        boolean[][] visited = new boolean[board.length][board[0].length];
+        for(int i = 0; i < board.length; i++){
+            for(int j = 0; j < board[0].length; j++){
+                backtrack(i, j, board, word, visited, 0);
+            }
+        }
+        return find;
     }
+
+    public void backtrack(int i, int j, char[][] board, String word, boolean[][] visited, int pos){
+        if(i < 0 || j < 0 || i >= board.length || j >= board[0].length || visited[i][j] || board[i][j] != word.charAt(pos)){
+            return;
+        }
+
+        if(pos == word.length() - 1){
+            find = true;
+            return;
+        }
+
+        visited[i][j] = true;
+        backtrack(i + 1, j, board, word, visited, pos + 1);
+        backtrack(i, j + 1, board, word, visited, pos + 1);
+        backtrack(i - 1, j, board, word, visited, pos + 1);
+        backtrack(i, j - 1, board, word, visited, pos + 1);
+        visited[i][j] = false;
+    }
+
+
 }
