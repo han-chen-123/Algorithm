@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic76.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic94.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic101.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic63.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic64.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic74.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic81.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic83.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic84.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic87.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic92.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic93.java" />
+      <file url="file://$PROJECT_DIR$/interviewTest/src/Algorithms/imooc/topic99.java" />
+    </excludeFromCompile>
+  </component>
+</project>
